@@ -3,12 +3,11 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("club_stats.csv")
 print(df.head())
 
-# create new metrics
 df["XG_Balance"] = (df["XG"] - df["XGA"])
 df["Big_Chance_Balance"] = (df["Big_Chance_Created"] - df["Opp_Big_Chance"])
 df["Shot_Dominance"] = (df["Shot_On_Target"] - df["Opp_Shots_On_Target"])
 
-# create graph function
+# create graph
 def make_bar_chart(column, title, ylabel):
  sorted_df = df.sort_values(column, ascending=False)
  plt.figure(figsize=(10,6))
