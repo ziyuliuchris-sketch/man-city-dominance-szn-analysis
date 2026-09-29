@@ -1,9 +1,6 @@
-# import 
 import pandas as pd
 import matplotlib.pyplot as plt
-# load dataset
 df = pd.read_csv("club_stats.csv")
-# check dataset
 print(df.head())
 
 # create new metrics
